@@ -29,7 +29,7 @@ def publishedProjects = pluginProjects + profileProjects
 
 subprojects { Project project ->
     group "org.grails.plugins"
-    version "2.0.0.RC1"
+    version "2.0.0.TRITON.1"
 
     ext {
         grailsVersion = project.grailsVersion
@@ -143,3 +143,4 @@ task aggregateGroovyDoc(type: Groovydoc) {
     classpath = files(groovyDocProjects.groovydoc.classpath)
     groovyClasspath = files(groovyDocProjects.groovydoc.groovyClasspath)
 }
+

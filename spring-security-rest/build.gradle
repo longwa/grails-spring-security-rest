@@ -60,3 +60,5 @@ license {
     ext.email = 'alvaro.sanchezmariscal@gmail.com'
 }
 */
+
+apply from: rootProject.file("gradle/publishing.gradle")
