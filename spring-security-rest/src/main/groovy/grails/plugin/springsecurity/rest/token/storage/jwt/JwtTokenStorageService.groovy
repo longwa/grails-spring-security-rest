@@ -52,10 +52,10 @@ class JwtTokenStorageService implements TokenStorageService {
             }
 
             if(jwt.JWTClaimsSet.getBooleanClaim(AbstractJwtTokenGenerator.REFRESH_ONLY_CLAIM)) {
-                return loadUserFromRefresh(jwt)
+                return loadUserFromRefreshToken(jwt)
             }
 
-            return loadUserFromAccess(jwt)
+            return loadUserFromAccessToken(jwt)
 
         } catch (ParseException ignored) {
             throw new TokenNotFoundException("Token ${tokenValue} is not valid")
@@ -67,7 +67,7 @@ class JwtTokenStorageService implements TokenStorageService {
     /**
      * Load user details for an access token
      */
-    protected UserDetails loadUserFromAccess(JWT jwt) {
+    protected UserDetails loadUserFromAccessToken(JWT jwt) {
         log.debug "Verified JWT, trying to deserialize the principal object"
         try {
             UserDetails details = JwtService.deserialize(jwt.JWTClaimsSet.getStringClaim('principal'))
@@ -91,7 +91,7 @@ class JwtTokenStorageService implements TokenStorageService {
      * @param jwt the refresh token
      * @return
      */
-    protected UserDetails loadUserFromRefresh(JWT jwt) {
+    protected UserDetails loadUserFromRefreshToken(JWT jwt) {
         UserDetails principal = userDetailsService.loadUserByUsername(jwt.JWTClaimsSet.subject)
 
         if(!principal){
