@@ -11,8 +11,7 @@ chance to the other implementations to store the principal if they need to.
 
 === JSON Web Token
 
-JSON Web Token (JWT) is an http://tools.ietf.org/html/draft-ietf-oauth-json-web-token[IETF standard] (in progress)
-which defines a secure way to encapsulate arbitrary data that can be sent over unsecure URL's.
+JSON Web Token (JWT) is an https://tools.ietf.org/html/rfc7519[IETF standard] which defines a secure way to encapsulate arbitrary data that can be sent over unsecure URL's.
 
 Generally speaking, JWT's can be useful in the following use cases:
 
@@ -81,7 +80,7 @@ the algorithm used is HMAC SHA-256 with a specified shared secret. The relevant 
 |`true`
 
 |`grails.plugin.springsecurity.rest.token.storage.jwt.secret`
-|`'qrD6h8K6S9503Q06Y6Rfk21TErImPYqa'`
+|`null` //Needs to be set or the app won't boot
 
 |`grails.plugin.springsecurity.rest.token.storage.jwt.expiration`
 |`3600`
@@ -114,7 +113,7 @@ https://tools.ietf.org/html/draft-ietf-jose-json-web-encryption[JSON Web Encrypt
 Particularly, this plugin uses RSAES OAEP for key encryption and AES GCM (Galois/Counter Mode) algorithm with a 256 bit key
 for content encryption.
 
-By default, RSA public/private keys ar generated every time the application runs. This means that  generated tokens
+By default, RSA public/private keys are generated every time the application runs. This means that  generated tokens
 won't be decrypted across executions of the application. So better create your own key pair using OpenSSL:
 
 [source,bash]

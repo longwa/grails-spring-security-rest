@@ -15,12 +15,15 @@ Documentation:
 Companies using this plugin
 ---------------------------
 
-* [CloudCard](http://www.cloudcardtools.com)
+* [CloudCard Online Photo Submission](http://www.onlinephotosubmission.com)
 * [HealthReveal](http://www.healthreveal.com)
 * [Murallo](http://murallo.com)
 * [Odobo](http://www.odobo.com)
-* [Sharptop Software](http://www.sharptop.co)
+* [Sharptop Software](http://www.sharptop.io)
 * [Zaccak Solutions](http://www.zaccak.com)
+* [Lyshnia Limited](https://lyshnia.com)
+* [Wiz Panda](https://www.wizpanda.com)
+* [Zana Technologies GmbH](https://zana.com)
 
 _Are you using this plugin and want to be listed here? [Include your company yourself](https://github.com/alvarosanchez/grails-spring-security-rest/edit/develop/README.md)_.
 
@@ -69,8 +72,10 @@ Contributors
 * [Sean Brady](https://github.com/sbrady).
 * [Sergey Shatunov](https://github.com/Prototik).
 * [Sergio del Amo](https://github.com/sdelamo).
-* [Tony Erskine](https://github.com/tonyerskine).
+* [Shashank Agrawal](https://github.com/sagrawal31).
 * [Svante Rohlin](https://github.com/srohlin).
+* [Tomás Crespo](https://github.com/tcrespog).
+* [Tony Erskine](https://github.com/tonyerskine).
 * [Victor Saar](https://github.com/vsaar).
 
 License
