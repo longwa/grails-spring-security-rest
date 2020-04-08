@@ -69,7 +69,7 @@ class RestLogoutFilter extends GenericFilterBean {
 
                 try {
                     log.debug "Trying to remove the token"
-                    tokenStorageService.removeToken accessToken
+                    tokenStorageService.removeToken accessToken.accessToken
                 } catch (TokenNotFoundException ignored) {
                     servletResponse.sendError HttpServletResponse.SC_NOT_FOUND, "Token not found"
                 }

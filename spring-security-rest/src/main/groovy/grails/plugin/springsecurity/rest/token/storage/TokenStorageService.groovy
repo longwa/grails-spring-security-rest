@@ -21,7 +21,7 @@ import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.Authentication
 
 /**
- * Implementations of this interface are responsible to load user information from a token storage system, and to store
+ * Implementations of this trait are responsible to load user information from a token storage system, and to store
  * token information into it.
  */
 trait TokenStorageService {
@@ -50,13 +50,5 @@ trait TokenStorageService {
      * Removes a token from the storage.
      * @throws TokenNotFoundException if the given token is not found in the storage
      */
-    void removeToken(String tokenValue) throws TokenNotFoundException {}
-
-    /**
-     * Remove the given accessToken from storage. Allows for handling of refresh token and other JWT claims as needed.
-     * @throws TokenNotFoundException if the given token is not found in the storage
-     */
-    void removeToken(AccessToken accessToken) throws TokenNotFoundException {
-        removeToken(accessToken.accessToken)
-    }
+    abstract void removeToken(String tokenValue) throws TokenNotFoundException
 }
